@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Notre Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment scrollable [value]="selectedCategory" (ionChange)="onCategoryTabChange($event)">
+    <ion-segment-button *ngFor="let category of categories" [value]="category">
+      {{category}}
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-grid class="grid-categories">
+    <ion-row *ngFor="let product of viewProducts;  let i = index">
+      <ion-col  *ngIf="i % 3 == 0"  >
+
+        <ion-card   >
+   
+          <!-- 
+            another checkout
+            <ion-card-content class="no-padding" (click)="onProductClick()">
+             -->
+            
+            <ion-card-content class="no-padding" >
+            <img [src]="product.imgPath"  alt="image">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-subtitle>{{product.name}}</ion-card-subtitle>
+            <ion-card-title>{{product.price}} TND</ion-card-title>
+          </ion-card-header>
+          <div class="text-center">
+
+            <ion-button 
+            (click)="addToCart($event, product.id)"      >Add to Cart</ion-button>
+                      </div>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid-categories">
+    <ion-row *ngFor="let product of viewProducts;  let i = index">
+      <ion-col  *ngIf="i % 3 == 1"  >
+
+        <ion-card   >
+   
+          <ion-card-content class="no-padding" (click)="onProductClick()">
+            <img [src]="product.imgPath"  alt="image">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-subtitle>{{product.name}}</ion-card-subtitle>
+            <ion-card-title>{{product.price}} TND</ion-card-title>
+          </ion-card-header>
+          <div class="text-center">
+            <ion-button 
+            (click)="addToCart($event, product.id)"      >Add to Cart</ion-button>
+          </div>
+        </ion-card>
+        
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid-categories">
+    <ion-row *ngFor="let product of viewProducts;  let i = index">
+      <ion-col  *ngIf="i % 3 == 2"  >
+
+        <ion-card   >
+   
+          <ion-card-content class="no-padding" (click)="onProductClick()">
+            <img [src]="product.imgPath"  alt="image">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-subtitle>{{product.name}}</ion-card-subtitle>
+            <ion-card-title>{{product.price}} TND</ion-card-title>
+          </ion-card-header>
+          <div class="text-center">
+            <ion-button 
+            (click)="addToCart($event, product.id)"      >Add to Cart</ion-button>
+          </div>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

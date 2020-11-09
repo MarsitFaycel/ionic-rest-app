@@ -1,0 +1,12 @@
+.grid-categories {
+    width: 33.3%;
+    float: left;
+    
+}
+@media (max-width: 576px) {
+    .grid-categories {
+        width: 100%;
+        float: left;
+        
+    }
+}

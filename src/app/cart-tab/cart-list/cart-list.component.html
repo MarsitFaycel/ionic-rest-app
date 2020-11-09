@@ -1,0 +1,39 @@
+
+
+    
+<ion-card  *ngFor="let item of cartItems" >
+  <ion-card-content>
+    <div class="flex-with-space-between">
+      <div class="flex">
+        <div>
+          <img
+            [src]="item.imgPath"
+            class="img-circle" />
+        </div>
+        <div class="flex-column ion-margin-start" style="max-width: 200px;">
+          <div>
+            <ion-label style="font-weight: 600;">{{item.name}}</ion-label>
+          </div>
+          <div class="small-vertical-height"></div>
+          <div class="flex-item-center">
+            <div class="bold">{{item.price | currency:'TND'}}</div>
+           <!--  <div class="ion-margin-start flex-item-center">
+               <ion-icon name="remove-circle-outline" color="primary"></ion-icon> <span
+                style="margin: 0px 5px;">10</span> 
+              <ion-icon name="add-circle-outline" color="primary"></ion-icon>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div>
+        <ion-icon slot="icon-only" name="trash" (click)="removeItemFromCart(item.id)"></ion-icon>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card> 
+
+
+
+
+
+
