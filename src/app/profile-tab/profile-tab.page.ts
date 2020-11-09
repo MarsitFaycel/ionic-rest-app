@@ -24,7 +24,7 @@ export class ProfileTabPage implements OnInit {
     this.selectedSegment = $event.detail.value;
   }
 
-  async openThemePopover(ev: any) {
+  async openThemePopover(ev?: any) {
     const popover = await this.popoverController.create({
       component: ThemeComponent,
       event: ev,

@@ -7,7 +7,7 @@ import { MySharedService } from '../services/shared.service';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
-  private cartProductCount: number = 0;
+  public cartProductCount: number = 0;
   constructor(
     private mySharedService: MySharedService
   ) { }

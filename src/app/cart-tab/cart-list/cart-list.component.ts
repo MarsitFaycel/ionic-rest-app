@@ -7,7 +7,7 @@ import { MySharedService } from 'src/app/services/shared.service';
   styleUrls: ['./cart-list.component.scss'],
 })
 export class CartListComponent implements OnInit {
-  private cartItems;
+  public cartItems;
   
 
   constructor(
