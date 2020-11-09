@@ -2,6 +2,16 @@
 
 build url : https://todoapp-3f91b.web.app/tabs/menu-tab
 
+# 0 build et firebase deploy
+
+tuto link https://devdactic.com/host-ionic-website-firebase/
+
+1- ionic build --prod --release
+
+2- firebase init
+
+3- firebase deploy
+
 ## 1-menu tab
 
 1- list of products : pizza, burger, dessert, drinks, snacks 

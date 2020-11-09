@@ -7,7 +7,7 @@ import { MySharedService } from '../services/shared.service';
   styleUrls: ['./cart-tab.page.scss'],
 })
 export class CartTabPage implements OnInit {
-  private totalAmmount;
+  public totalAmmount;
 
   constructor(private mySharedService:MySharedService) { }
 
