@@ -32,3 +32,14 @@ tuto link https://devdactic.com/host-ionic-website-firebase/
 
 5- add total badge
 
+## 3- authentification
+
+link tuto: https://www.youtube.com/watch?v=Du6hrnod0IE
+
+1- signin component
+
+2-login component
+
+3-config firebase
+
+

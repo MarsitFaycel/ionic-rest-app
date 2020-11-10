@@ -11,10 +11,14 @@ import { AppComponent } from './app.component';
 import { ThemeComponent } from './profile-tab/theme/theme.component';
 import { MySharedService } from './services/shared.service';
 
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {environment} from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent, ThemeComponent],
   entryComponents: [ThemeComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule , AngularFireModule.initializeApp(environment.firebase), AngularFireAuthModule
     ],
   providers: [
     StatusBar,
